@@ -5,13 +5,13 @@ const projects = [
         title: "IPFire Configuration",
         description: "Implemented a firewall and DMZ to secure the network and efficiently manage traffic.",
         image: "../images/IPFire.jpg",
-        link: "./project1.html"
+        link: "../html/project1.html"
     },
     {
         title: "Inventory Manager",
         description: "Robust Java application with MySQL for real-time stock control.",
         image: "../images/inventory.png",
-        link: "./project2.html"
+        link: "../html/project2.html"
     },
     {
         title: "Weather App",
