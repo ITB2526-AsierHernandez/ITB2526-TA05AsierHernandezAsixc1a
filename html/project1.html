@@ -25,29 +25,89 @@
     </header>
     <main class="main_wrapper">
         <div class="main_destacats">
-            <h1 class="titol_projecte_destacat">PROJECT NAME</h1>
+            <h1 class="titol_projecte_destacat">Web Server Implementation with DMZ, Security Rules, and Web Development
+            </h1>
             <article class="article_projecte_destacat">
-                <img src="../images/server.jpeg" alt="Project image">
+                <img src="../images/IPFire.jpg" alt="Project image">
                 <div class="project_text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacus mauris, imperdiet in aliquet eget,
-                        consectetur vel ipsum. Nullam gravida lobortis erat. Interdum et malesuada fames ac ante ipsum primis in
-                        faucibus. Vivamus non feugiat nunc, non porta felis. Nunc tincidunt ex id sagittis porttitor. Ut
-                        suscipit nisi nec auctor condimentum. Sed cursus, ex non tempus commodo, diam metus posuere odio, at
-                        lobortis eros nisi nec ex. Suspendisse semper id libero eget efficitur.
-                    </p>
-                    <p>
-                        Praesent non mauris quis risus luctus cursus. Nam ultrices condimentum ornare. Cras eget erat accumsan,
-                        auctor lorem a, vestibulum dui. Maecenas viverra scelerisque orci ac porttitor. Interdum et malesuada
-                        fames ac ante ipsum primis in faucibus. Pellentesque tempus magna nec imperdiet vulputate. Duis vel
-                        euismod magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Curabitur lacinia tellus id enim congue, nec accumsan neque varius.
-                    </p>
-                    <p>
-                        Nulla ac posuere nibh. Aliquam cursus metus sit amet fringilla molestie. Ut euismod tortor tortor, ac
-                        vulputate nibh mattis id. Mauris maximus nulla sed lorem laoreet ornare. In vitae tincidunt nisi.
-                        Vestibulum lacinia turpis eget ipsum elementum, et luctus leo luctus.
-                    </p>
+                    <section class="project-details">
+                        <h3>Project Title: Secure Network Architecture Implementation (DMZ Deployment)</h3>
+
+                        <h4>Executive Summary</h4>
+                        <p>
+                            This project involved the design and implementation of a segmented network architecture
+                            using a
+                            <strong>Demilitarized Zone (DMZ)</strong>. The primary goal was to host a public-facing web
+                            server
+                            while ensuring the complete isolation and security of the internal local area network (LAN).
+                            By utilizing a dedicated firewall, I established strict traffic control policies to mitigate
+                            external threats and prevent lateral movement.
+                        </p>
+
+                        <h4>Technical Architecture & Segmentation</h4>
+                        <p>The network was structured into three distinct security zones based on a color-coded trust
+                            model:</p>
+                        <ul>
+                            <li><strong>GREEN Zone (LAN):</strong> The high-trust internal network where local clients
+                                reside.</li>
+                            <li><strong>ORANGE Zone (DMZ):</strong> The semi-trusted zone hosting the Web Server,
+                                isolated from the internal network.</li>
+                            <li><strong>RED Zone (WAN):</strong> The untrusted external network (Internet).</li>
+                        </ul>
+
+                        <h4>Key Technical Implementations</h4>
+                        <ul>
+                            <li>
+                                <strong>Firewall & Traffic Management:</strong>
+                                <ul>
+                                    <li>Configured a perimeter firewall to manage inter-zone communication.</li>
+                                    <li>Implemented specific Access Control Lists (ACLs):
+                                        <ul>
+                                            <li><em>Allowed:</em> RED → ORANGE (HTTP/HTTPS access).</li>
+                                            <li><em>Allowed:</em> ORANGE → RED (System updates).</li>
+                                            <li><em>Blocked:</em> RED → GREEN and ORANGE → GREEN (Preventing lateral
+                                                movement).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Web Server Hardening & Security:</strong>
+                                <ul>
+                                    <li><strong>Encryption:</strong> Deployed a Web Server with HTTPS by generating and
+                                        configuring custom SSL/TLS certificates.</li>
+                                    <li><strong>Intrusion Prevention:</strong> Configured <code>mod-evasive</code> to
+                                        protect against DDoS and brute-force attacks.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>System Optimization:</strong>
+                                <ul>
+                                    <li>Automated network interface management using <code>nmcli</code> scripts to
+                                        disable redundant interfaces (enp0s8) at boot, reducing the attack surface.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>Tech Stack</h4>
+                        <ul>
+                            <li><strong>Security:</strong> Firewall Administration, SSL/TLS Certificates, mod-evasive
+                                (IPS).</li>
+                            <li><strong>Networking:</strong> DMZ Architecture, VLAN/Interface segmentation, TCP/IP.</li>
+                            <li><strong>Servers:</strong> Linux-based Web Servers (Apache), Client Workstations.</li>
+                            <li><strong>Tools:</strong> nmcli, Virtualization, Firewall Web GUI.</li>
+                        </ul>
+
+                        <h4>Core Competencies</h4>
+                        <ul>
+                            <li><strong>Network Defense:</strong> Designing architectures that isolate critical assets.
+                            </li>
+                            <li><strong>Risk Mitigation:</strong> Implementing "Least Privilege" access at the network
+                                level.</li>
+                            <li><strong>Automation:</strong> Scripting system startups to maintain security posture.
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </article>
         </div>

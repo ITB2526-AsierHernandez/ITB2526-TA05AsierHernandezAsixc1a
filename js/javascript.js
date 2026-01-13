@@ -2,16 +2,16 @@
 const projectLink = document.getElementById("project-link");
 const projects = [
     {
+        title: "IPFire Configuration",
+        description: "Implemented a firewall and DMZ to secure the network and efficiently manage traffic.",
+        image: "../images/IPFire.jpg",
+        link: "./project2.html"
+    },
+    {
         title: "Inventory Manager",
         description: "Robust Java application with MySQL for real-time stock control.",
         image: "../images/inventory.png",
         link: "./project1.html"
-    },
-    {
-        title: "ToDo App",
-        description: "Task manager with dynamic task creation and deletion.",
-        image: "../images/todoap.png",
-        link: "./project2.html"
     },
     {
         title: "Weather App",
